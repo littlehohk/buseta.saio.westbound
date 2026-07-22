@@ -45,49 +45,55 @@
     margin-top: 10px;
     width: 100%;
   }
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
   .card {
     background: var(--card);
     border: 1px solid var(--card-border);
     border-radius: 16px;
-    padding: 14px 16px;
-    margin-bottom: 12px;
+    padding: 12px 12px;
+    margin-bottom: 0;
   }
   .card-top {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
     margin-bottom: 8px;
   }
   .route {
-    font-size: 40px;
+    font-size: 28px;
     font-weight: 800;
     color: var(--accent);
   }
   .dest {
-    font-size: 24px;
+    font-size: 16px;
     color: var(--sub);
-    text-align: right;
-    max-width: 65%;
+    text-align: left;
+    max-width: 100%;
   }
   .etas {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     flex-wrap: wrap;
   }
   .eta-pill {
     background: #1e2227;
     border-radius: 10px;
-    padding: 6px 10px;
-    font-size: 36px;
+    padding: 6px 8px;
+    font-size: 24px;
     font-weight: 600;
-    min-width: 54px;
+    min-width: 46px;
     text-align: center;
   }
-  .eta-pill span { display: block; font-size: 36px; font-weight: 400; color: var(--sub); }
+  .eta-pill span { display: block; font-size: 12px; font-weight: 400; color: var(--sub); }
   .urgent { color: var(--urgent); }
   .soon { color: var(--soon); }
   .ok { color: var(--ok); }
-  .error { color: var(--urgent); font-size: 24px; }
+  .error { color: var(--urgent); font-size: 16px; }
 </style>
 </head>
 <body>
@@ -96,7 +102,7 @@
 </header>
 <div id="updated">Loading…</div>
 <button class="refresh-btn" onclick="loadAll()">Refresh now</button>
-<div id="cards" style="margin-top:14px;"></div>
+<div id="cards" class="cards-grid" style="margin-top:14px;"></div>
 
 <script>
 const ROUTES = [

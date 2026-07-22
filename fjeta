@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Bus ETA Chevalier Garden Bus Terminal Westbound</title>
+<title>Bus ETA for FJ</title>
 <style>
   :root {
     --bg: #0b0d10;
@@ -92,7 +92,7 @@
 </head>
 <body>
 <header>
-  <h1>🚌 Bus ETA Chevalier Garden Bus Terminal Westbound</h1>
+  <h1>🚌 Bus ETA for FJ</h1>
 </header>
 <div id="updated">Loading…</div>
 <button class="refresh-btn" onclick="loadAll()">Refresh now</button>
@@ -101,9 +101,13 @@
 <script>
 const ROUTES = [
   { route: "85K 富安", url: "https://data.etabus.gov.hk/v1/transport/kmb/eta/C81CBD93FB2B5C60/85K/1" },
-  { route: "40X 富安", url: "https://data.etabus.gov.hk/v1/transport/kmb/eta/36D7B643B6B5680A/84M/2" },
-  { route: "85K 禾輋", url: "https://data.etabus.gov.hk/v1/transport/kmb/eta/F508350699744D24/81C/1" },
-  { route: "40X 禾輋", url: "https://data.etabus.gov.hk/v1/transport/kmb/eta/D2C5873747260F13/43X/1" }
+  { route: "40X 富安", url: "https://data.etabus.gov.hk/v1/transport/kmb/eta/763D73BAB7E2A1AE/40X/1" },
+  { route: "81C 富安", url: "https://data.etabus.gov.hk/v1/transport/kmb/eta/F508350699744D24/81C/1" },
+  { route: "84M 富安", url: "https://data.etabus.gov.hk/v1/transport/kmb/eta/36D7B643B6B5680A/84M/2" }
+  { route: "85K 禾輋", url: "https://data.etabus.gov.hk/v1/transport/kmb/eta/D85AF13DC2FB0118/85K/1" },
+  { route: "40X 禾輋", url: "https://data.etabus.gov.hk/v1/transport/kmb/eta/D85AF13DC2FB0118/40X/1" },
+  { route: "81C 禾輋", url: "https://data.etabus.gov.hk/v1/transport/kmb/eta/A66159E033DDEA04/81C/1" },
+  { route: "84M 禾輋", url: "https://data.etabus.gov.hk/v1/transport/kmb/eta/52C1ADA57FFA7DD4/84M/1" }
 ];
 
 function minutesUntil(isoString) {

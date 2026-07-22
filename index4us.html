@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>巴士到站預報(富安)</title>
+<style>
+  :root {
+    --bg: #0b0d10;
+    --card: #16191d;
+    --card-border: #23272c;
+    --text: #f2f3f5;
+    --sub: #9aa0a6;
+    --accent: #ffcc00;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    padding: env(safe-area-inset-top) 16px calc(env(safe-area-inset-bottom) + 24px);
+    min-height: 100vh;
+  }
+  header {
+    padding: 20px 4px 16px;
+  }
+  h1 { font-size: 22px; margin: 0; font-weight: 700; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 12px;
+  }
+  a.card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 16px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.4;
+    min-height: 140px;
+    transition: background 0.15s ease;
+  }
+  a.card:active {
+    background: #1e2227;
+  }
+  a.card .accent { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <h1>🚌 巴士到站預報(富安)</h1>
+</header>
+<div class="grid">
+  <a class="card" href="https://littlehohk.github.io/buseta/home.html">西行巴士(自定)</a>
+  <a class="card" href="https://littlehohk.github.io/buseta/buseta saio westbound.html">西行巴士(西澳)</a>
+  <a class="card" href="https://littlehohk.github.io/buseta/buseta chevalier westbound.html">西行巴士(近大水坑站)</a>
+  <a class="card" href="https://littlehohk.github.io/buseta/buseta chevalier terminal westbound.html">西行巴士(富安總站)</a>
+  <a class="card" href="https://littlehohk.github.io/buseta/buseta chevalier eastbound.html">東行巴士(富安近馬崇)</a>
+  <a class="card" href="https://littlehohk.github.io/buseta/buseta chevalier terminal eastbound.html">東行巴士(富安總站)</a>
+</div>
+</body>
+</html>
